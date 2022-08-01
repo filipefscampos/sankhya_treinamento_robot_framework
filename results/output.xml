@@ -1,324 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220729 20:28:54.217" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220801 19:27:35.928" rpa="false" schemaversion="3">
 <suite id="s1" name="Sankhya Treinamento Robot Framework" source="C:\temp\TreinamentoRobot\sankhya_treinamento_robot_framework">
 <suite id="s1-s1" name="Test" source="C:\temp\TreinamentoRobot\sankhya_treinamento_robot_framework\test">
-<suite id="s1-s1-s1" name="Ifelse" source="C:\temp\TreinamentoRobot\sankhya_treinamento_robot_framework\test\ifelse.robot">
-<test id="s1-s1-s1-t1" name="Imprimindo apenas 5 ou 8" line="7">
-<kw name="Contar de 0 a 9" library="resource">
-<for flavor="IN RANGE">
-<var>${count}</var>
-<value>0</value>
-<value>9</value>
-<iter>
-<var name="${count}">0</var>
-<if>
-<branch type="IF" condition="${count}==5">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.263" endtime="20220729 20:28:54.264"/>
+<suite id="s1-s1-s1" name="Setup Teardown" source="C:\temp\TreinamentoRobot\sankhya_treinamento_robot_framework\test\setup_teardown.robot">
+<kw name="setup da minha suite de teste" library="resource" type="SETUP">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Executa ANTES de TODA suite \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220801 19:27:35.968" endtime="20220801 19:27:35.970"/>
 </kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.262" endtime="20220729 20:28:54.264"/>
-</branch>
-<branch type="ELSE IF" condition="${count}==8">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.264" endtime="20220729 20:28:54.264"/>
+<status status="PASS" starttime="20220801 19:27:35.968" endtime="20220801 19:27:35.971"/>
 </kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.264" endtime="20220729 20:28:54.264"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log" library="BuiltIn">
-<arg>Sem numero nenhum</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220729 20:28:54.265" level="INFO">Sem numero nenhum</msg>
-<status status="PASS" starttime="20220729 20:28:54.264" endtime="20220729 20:28:54.266"/>
+<test id="s1-s1-s1-t1" name="login do sistema" line="11">
+<kw name="setup do teste" library="resource" type="SETUP">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Executa ANTES de CADA teste \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220801 19:27:35.973" endtime="20220801 19:27:35.975"/>
 </kw>
-<status status="PASS" starttime="20220729 20:28:54.264" endtime="20220729 20:28:54.266"/>
-</branch>
-<status status="PASS" starttime="20220729 20:28:54.262" endtime="20220729 20:28:54.266"/>
-</if>
-<status status="PASS" starttime="20220729 20:28:54.262" endtime="20220729 20:28:54.266"/>
-</iter>
-<iter>
-<var name="${count}">1</var>
-<if>
-<branch type="IF" condition="${count}==5">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.267" endtime="20220729 20:28:54.267"/>
+<status status="PASS" starttime="20220801 19:27:35.973" endtime="20220801 19:27:35.975"/>
 </kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.267" endtime="20220729 20:28:54.267"/>
-</branch>
-<branch type="ELSE IF" condition="${count}==8">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.268" endtime="20220729 20:28:54.268"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Fazendo o login \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220801 19:27:35.975" endtime="20220801 19:27:35.976"/>
 </kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.267" endtime="20220729 20:28:54.268"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log" library="BuiltIn">
-<arg>Sem numero nenhum</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220729 20:28:54.270" level="INFO">Sem numero nenhum</msg>
-<status status="PASS" starttime="20220729 20:28:54.269" endtime="20220729 20:28:54.272"/>
+<kw name="teardown do teste" library="resource" type="TEARDOWN">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Executa DEPOIS de CADA teste \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220801 19:27:35.978" endtime="20220801 19:27:35.980"/>
 </kw>
-<status status="PASS" starttime="20220729 20:28:54.268" endtime="20220729 20:28:54.272"/>
-</branch>
-<status status="PASS" starttime="20220729 20:28:54.267" endtime="20220729 20:28:54.272"/>
-</if>
-<status status="PASS" starttime="20220729 20:28:54.266" endtime="20220729 20:28:54.272"/>
-</iter>
-<iter>
-<var name="${count}">2</var>
-<if>
-<branch type="IF" condition="${count}==5">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.274" endtime="20220729 20:28:54.275"/>
+<status status="PASS" starttime="20220801 19:27:35.977" endtime="20220801 19:27:35.980"/>
 </kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.274" endtime="20220729 20:28:54.275"/>
-</branch>
-<branch type="ELSE IF" condition="${count}==8">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.276" endtime="20220729 20:28:54.276"/>
-</kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.276" endtime="20220729 20:28:54.276"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log" library="BuiltIn">
-<arg>Sem numero nenhum</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220729 20:28:54.277" level="INFO">Sem numero nenhum</msg>
-<status status="PASS" starttime="20220729 20:28:54.277" endtime="20220729 20:28:54.280"/>
-</kw>
-<status status="PASS" starttime="20220729 20:28:54.276" endtime="20220729 20:28:54.280"/>
-</branch>
-<status status="PASS" starttime="20220729 20:28:54.273" endtime="20220729 20:28:54.280"/>
-</if>
-<status status="PASS" starttime="20220729 20:28:54.272" endtime="20220729 20:28:54.280"/>
-</iter>
-<iter>
-<var name="${count}">3</var>
-<if>
-<branch type="IF" condition="${count}==5">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.281" endtime="20220729 20:28:54.281"/>
-</kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.281" endtime="20220729 20:28:54.282"/>
-</branch>
-<branch type="ELSE IF" condition="${count}==8">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.282" endtime="20220729 20:28:54.282"/>
-</kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.282" endtime="20220729 20:28:54.282"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log" library="BuiltIn">
-<arg>Sem numero nenhum</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220729 20:28:54.283" level="INFO">Sem numero nenhum</msg>
-<status status="PASS" starttime="20220729 20:28:54.283" endtime="20220729 20:28:54.285"/>
-</kw>
-<status status="PASS" starttime="20220729 20:28:54.282" endtime="20220729 20:28:54.286"/>
-</branch>
-<status status="PASS" starttime="20220729 20:28:54.281" endtime="20220729 20:28:54.286"/>
-</if>
-<status status="PASS" starttime="20220729 20:28:54.280" endtime="20220729 20:28:54.286"/>
-</iter>
-<iter>
-<var name="${count}">4</var>
-<if>
-<branch type="IF" condition="${count}==5">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.288" endtime="20220729 20:28:54.288"/>
-</kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.287" endtime="20220729 20:28:54.289"/>
-</branch>
-<branch type="ELSE IF" condition="${count}==8">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.290" endtime="20220729 20:28:54.290"/>
-</kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.289" endtime="20220729 20:28:54.290"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log" library="BuiltIn">
-<arg>Sem numero nenhum</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220729 20:28:54.290" level="INFO">Sem numero nenhum</msg>
-<status status="PASS" starttime="20220729 20:28:54.290" endtime="20220729 20:28:54.293"/>
-</kw>
-<status status="PASS" starttime="20220729 20:28:54.290" endtime="20220729 20:28:54.293"/>
-</branch>
-<status status="PASS" starttime="20220729 20:28:54.287" endtime="20220729 20:28:54.293"/>
-</if>
-<status status="PASS" starttime="20220729 20:28:54.286" endtime="20220729 20:28:54.293"/>
-</iter>
-<iter>
-<var name="${count}">5</var>
-<if>
-<branch type="IF" condition="${count}==5">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220729 20:28:54.294" level="INFO">Encontrou o 5</msg>
-<status status="PASS" starttime="20220729 20:28:54.294" endtime="20220729 20:28:54.296"/>
-</kw>
-<status status="PASS" starttime="20220729 20:28:54.294" endtime="20220729 20:28:54.296"/>
-</branch>
-<branch type="ELSE IF" condition="${count}==8">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.296" endtime="20220729 20:28:54.297"/>
-</kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.296" endtime="20220729 20:28:54.297"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log" library="BuiltIn">
-<arg>Sem numero nenhum</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.298" endtime="20220729 20:28:54.298"/>
-</kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.297" endtime="20220729 20:28:54.298"/>
-</branch>
-<status status="PASS" starttime="20220729 20:28:54.294" endtime="20220729 20:28:54.298"/>
-</if>
-<status status="PASS" starttime="20220729 20:28:54.293" endtime="20220729 20:28:54.298"/>
-</iter>
-<iter>
-<var name="${count}">6</var>
-<if>
-<branch type="IF" condition="${count}==5">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.300" endtime="20220729 20:28:54.300"/>
-</kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.299" endtime="20220729 20:28:54.300"/>
-</branch>
-<branch type="ELSE IF" condition="${count}==8">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.301" endtime="20220729 20:28:54.301"/>
-</kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.300" endtime="20220729 20:28:54.301"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log" library="BuiltIn">
-<arg>Sem numero nenhum</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220729 20:28:54.302" level="INFO">Sem numero nenhum</msg>
-<status status="PASS" starttime="20220729 20:28:54.301" endtime="20220729 20:28:54.303"/>
-</kw>
-<status status="PASS" starttime="20220729 20:28:54.301" endtime="20220729 20:28:54.303"/>
-</branch>
-<status status="PASS" starttime="20220729 20:28:54.299" endtime="20220729 20:28:54.303"/>
-</if>
-<status status="PASS" starttime="20220729 20:28:54.299" endtime="20220729 20:28:54.303"/>
-</iter>
-<iter>
-<var name="${count}">7</var>
-<if>
-<branch type="IF" condition="${count}==5">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.304" endtime="20220729 20:28:54.304"/>
-</kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.304" endtime="20220729 20:28:54.305"/>
-</branch>
-<branch type="ELSE IF" condition="${count}==8">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.305" endtime="20220729 20:28:54.305"/>
-</kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.305" endtime="20220729 20:28:54.306"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log" library="BuiltIn">
-<arg>Sem numero nenhum</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220729 20:28:54.307" level="INFO">Sem numero nenhum</msg>
-<status status="PASS" starttime="20220729 20:28:54.306" endtime="20220729 20:28:54.309"/>
-</kw>
-<status status="PASS" starttime="20220729 20:28:54.306" endtime="20220729 20:28:54.309"/>
-</branch>
-<status status="PASS" starttime="20220729 20:28:54.304" endtime="20220729 20:28:54.309"/>
-</if>
-<status status="PASS" starttime="20220729 20:28:54.303" endtime="20220729 20:28:54.309"/>
-</iter>
-<iter>
-<var name="${count}">8</var>
-<if>
-<branch type="IF" condition="${count}==5">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.310" endtime="20220729 20:28:54.310"/>
-</kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.310" endtime="20220729 20:28:54.311"/>
-</branch>
-<branch type="ELSE IF" condition="${count}==8">
-<kw name="Log" library="BuiltIn">
-<arg>Encontrou o ${count}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220729 20:28:54.312" level="INFO">Encontrou o 8</msg>
-<status status="PASS" starttime="20220729 20:28:54.311" endtime="20220729 20:28:54.314"/>
-</kw>
-<status status="PASS" starttime="20220729 20:28:54.311" endtime="20220729 20:28:54.315"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log" library="BuiltIn">
-<arg>Sem numero nenhum</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220729 20:28:54.315" endtime="20220729 20:28:54.316"/>
-</kw>
-<status status="NOT RUN" starttime="20220729 20:28:54.315" endtime="20220729 20:28:54.316"/>
-</branch>
-<status status="PASS" starttime="20220729 20:28:54.310" endtime="20220729 20:28:54.316"/>
-</if>
-<status status="PASS" starttime="20220729 20:28:54.310" endtime="20220729 20:28:54.316"/>
-</iter>
-<status status="PASS" starttime="20220729 20:28:54.261" endtime="20220729 20:28:54.316"/>
-</for>
-<status status="PASS" starttime="20220729 20:28:54.261" endtime="20220729 20:28:54.316"/>
-</kw>
-<status status="PASS" starttime="20220729 20:28:54.259" endtime="20220729 20:28:54.317"/>
+<status status="PASS" starttime="20220801 19:27:35.971" endtime="20220801 19:27:35.980"/>
 </test>
-<status status="PASS" starttime="20220729 20:28:54.254" endtime="20220729 20:28:54.319"/>
+<test id="s1-s1-s1-t2" name="cenario de compra" line="16">
+<kw name="setup do teste" library="resource" type="SETUP">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Executa ANTES de CADA teste \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220801 19:27:35.984" endtime="20220801 19:27:35.985"/>
+</kw>
+<status status="PASS" starttime="20220801 19:27:35.984" endtime="20220801 19:27:35.985"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Fazendo um pedido de compra \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220801 19:27:35.986" endtime="20220801 19:27:35.988"/>
+</kw>
+<kw name="teardown do teste" library="resource" type="TEARDOWN">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Executa DEPOIS de CADA teste \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220801 19:27:35.989" endtime="20220801 19:27:35.990"/>
+</kw>
+<status status="PASS" starttime="20220801 19:27:35.988" endtime="20220801 19:27:35.990"/>
+</kw>
+<status status="PASS" starttime="20220801 19:27:35.982" endtime="20220801 19:27:35.991"/>
+</test>
+<kw name="teardown da minha suite de teste" library="resource" type="TEARDOWN">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Executa DEPOIS de TODA suite de teste \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220801 19:27:35.995" endtime="20220801 19:27:35.996"/>
+</kw>
+<status status="PASS" starttime="20220801 19:27:35.994" endtime="20220801 19:27:35.996"/>
+</kw>
+<status status="PASS" starttime="20220801 19:27:35.962" endtime="20220801 19:27:35.996"/>
 </suite>
-<status status="PASS" starttime="20220729 20:28:54.249" endtime="20220729 20:28:54.322"/>
+<status status="PASS" starttime="20220801 19:27:35.959" endtime="20220801 19:27:35.999"/>
 </suite>
-<status status="PASS" starttime="20220729 20:28:54.221" endtime="20220729 20:28:54.325"/>
+<status status="PASS" starttime="20220801 19:27:35.933" endtime="20220801 19:27:36.004"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Sankhya Treinamento Robot Framework">Sankhya Treinamento Robot Framework</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test">Sankhya Treinamento Robot Framework.Test</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Ifelse">Sankhya Treinamento Robot Framework.Test.Ifelse</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Sankhya Treinamento Robot Framework">Sankhya Treinamento Robot Framework</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Test">Sankhya Treinamento Robot Framework.Test</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="Setup Teardown">Sankhya Treinamento Robot Framework.Test.Setup Teardown</stat>
 </suite>
 </statistics>
 <errors>
